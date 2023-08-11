@@ -19,14 +19,6 @@ hamburger.addEventListener('click', function(){
     navMenu.classList.toggle('hidden');
 });
 
-// tap on window
-window.addEventListener('click', function(e){
-  if(e.target != hamburger && e.target != navMenu){
-    hamburger.classList.remove('hamburger-active');
-    navMenu.classList.add('hidden');
-  }
-});
-
 // back to top scroll
 const scrollToTopButton = document.getElementById('scrollToTopButton');
 
