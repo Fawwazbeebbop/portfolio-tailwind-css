@@ -1,13 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link href="dist/output.css" rel="stylesheet"/>
-    <link rel="shortcut icon" href="dist/img/F.png" type="image/x-icon">
-</head>
+    <link rel="shortcut icon" href="dist/img/logo F.png" type="image/x-icon">
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+          } else {
+            document.documentElement.classList.remove('dark')
+          }
+    </script>
+</head> 
+<style>
+    #scrollToTopButton {
+        transition: opacity 0.5s, transform 0.5s;
+        display: inline-flex;
+      }
+    #scrollToTopButton.hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+</style>
+  
 <body>
+
+    <!-- button back to top -->
+
+    <div id="scrollToTopButton" class="w-14 h-14 hidden bg-slate-900 rounded-full fixed bottom-5 right-5 z-10 cursor-pointer transition-opacity dark:bg-slate-700">
+        <a  id="icon" class="text-lg m-auto "><img src="dist/img/up-arrow.png" width="40" alt=""></a>
+    </div>
+    
+    <!-- button back to top -->
 
     <!-- Header Start -->
 
@@ -17,7 +43,7 @@
             <div class="flex items-center justify-between relative">
                 <div class="px-4">
                     <a href="#home" class="
-                      block  left-7 object-scale-down h-24 w-24 -translate-y-1"><img src="dist/img/F.png" alt="Logo">
+                        block scale-110 h-24 w-24 translate-y-2 translate-x-1 md:translate-x-8 "><img src="dist/img/logo F.png" alt="Logo">
                      </a>
                 </div>
                 <div class="flex items-center px-4">
@@ -28,31 +54,35 @@
                     </button>
 
                     <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg 
-                    rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg-rounded-none">
+                    rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg-rounded-none
+                    dark:bg-dark lg:dark:bg-transparent dark:shadow-slate-600">
                         <ul class="block lg:flex font-semibold">
                             <li class=" group">
-                                <a href="#home" class="text-base text-dark py-2 mx-8 flex
-                                group-hover:text-primary">Home</a>
+                                <a href="#home" class="navbar-hover">Home</a>
                             </li>
                             <li class=" group">
-                                <a href="#about" class="text-base text-dark py-2 mx-8 flex
-                                group-hover:text-primary">About Me</a>
+                                <a href="#about" class="navbar-hover">About Me</a>
                             </li>
                             <li class=" group">
-                                <a href="#portfolio" class="text-base text-dark py-2 mx-8 flex
-                                group-hover:text-primary">Portfolio</a>
+                                <a href="#portfolio" class="navbar-hover">Portfolio</a>
                             </li>
                             <li class=" group">
-                                <a href="#experience" class="text-base text-dark py-2 mx-8 flex
-                                group-hover:text-primary">Experience</a>
+                                <a href="#experience" class="navbar-hover">Experience</a>
                             </li>
                             <li class=" group">
-                                <a href="#gallery" class="text-base text-dark py-2 mx-8 flex
-                                group-hover:text-primary">Gallery</a>
+                                <a href="#gallery" class="navbar-hover">Gallery</a>
                             </li>
-                            <li class=" group">
-                                <a href="#contact" class="text-base text-dark py-2 mx-8 flex
-                                group-hover:text-primary">Contact</a>
+                            <li class="mt-3 md:mt-0 flex items-center pl-8">
+                                <div class="flex">
+                                    <span class="mr-2"><img src="dist/img/day-mode.png" width="20" alt=""></span>
+                                    <input type="checkbox" class="hidden" id="dark-toggle">
+                                    <label for="dark-toggle">
+                                        <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-700 dark:bg-slate-300 p-1">
+                                            <div class="toggle-circle h-4 w-4 rounded-full bg-white dark:bg-slate-950 transition duration-300 ease-in-out"></div>
+                                        </div>
+                                    </label>
+                                    <span class="ml-2"><img src="dist/img/night-mode.png" width="20" alt=""></span>
+                                </div>
                             </li>
                         </ul>
                     </nav>
@@ -65,15 +95,15 @@
     
     <!-- Hero Section Start -->
 
-    <section id="home" class="pt-36">
+    <section id="home" class="pt-36 dark:bg-dark">
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="w-full self-center px-4 lg:w-1/2">
                     <h1 class="text-base font-semibold text-primary md:text-xl">Hello Everyone 👋, I'am <span class="block font-bold
-                        text-dark text-4xl mt-1 lg:text-5xl">Fawwaz Maulana</span></h1>
-                    <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">Designer & Web Developer</h2>
-                    <p class="font-medium text-secondary mb-8 leading-relaxed">"Programming isn't about what you know, 
-                        <span class="text-dark font-bold">it's about what you can figure it out"</span></p>
+                        text-dark text-4xl mt-1 lg:text-5xl dark:text-white">Fawwaz Maulana</span></h1>
+                    <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl dark:text-slate-400"> Graphic Designer & Web Developer</h2>
+                    <p class="font-medium text-secondary mb-8 leading-relaxed dark:text-slate-400">"Programming isn't about what you know, 
+                        <span class="text-dark font-bold dark:text-white">it's about what you can figure it out"</span></p>
 
                     <a href="https://www.instagram.com/fwzmlna/" target="_blank" class="text-base font-semibold text-white bg-primary py-3 px-6 rounded-full 
                     hover:shadow-lg hover:opacity-80 transition duration-500 ease-in-out">Contact Me</a>    
@@ -81,9 +111,9 @@
                 <div class="w-full self-end px-4 lg:w-1/2">
                     <div class="relative mt-10 lg:mt-9 lg:right-0">
                         <img src="dist/img/foto1.png" alt="Fawwaz Maulana"
-                        class="max-w-full mx-auto">
+                        class="max-w-full mx-auto relative z-10">
                         
-                        <span class="absolute bottom-0 -z-10 left-1/2 -translate-x-1/2 md:scale-125">
+                        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 md:scale-125">
                           <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                             <path fill="#06b6d4" 
                              d="M58.9,-46.3C70.8,-32.1,71,-7.9,65.2,13.8C59.4,35.6,47.6,54.9,30.2,63.6C12.9,72.3,-10,70.4,-31.5,61.5C-52.9,52.7,-72.8,36.9,-77.8,17.1C-82.9,-2.7,-73.1,-26.6,-57.7,-41.7C-42.2,-56.7,-21.1,-63,1.2,-63.9C23.5,-64.9,47,-60.6,58.9,-46.3Z"
@@ -100,13 +130,13 @@
 
     <!-- About Section Start -->
 
-    <section id="about" class="pt-36 pb-32">
+    <section id="about" class="pt-36 pb-32 dark:bg-dark">
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="w-full px-4 mb-10 lg:w-1/2">
                     <h4 class="font-bold text-primary text-lg mb-3">About Me</h4>
-                    <h2 class="font-bold text-dark text-3xl mb-5 max-w-medium lg:text-4xl">A programmer who still learn a lot of things</h2>
-                    <p class="font-medium text-base text-secondary max-w-xl lg:text-lg text-justify">
+                    <h2 class="font-bold text-dark text-3xl mb-5 max-w-medium lg:text-4xl dark:text-white">A programmer who still learn a lot of things</h2>
+                    <p class="font-medium text-base text-secondary max-w-xl lg:text-lg text-justify dark:text-slate-400">
                      As an enthusiastic and detail-oriented web developer, 
                      I'am passionate about crafting elegant and functional web solutions. 
                      I have honed my skills in front-end and back-end development, utilizing HTML, CSS, JavaScript, and various frameworks like tailwind CSS, SASS, and others. 
@@ -114,35 +144,33 @@
                     </p>
                 </div>
                 <div class="w-full px-4 lg:w-1/2">
-                    <h3 class="font-semibold text-dark text-3xl mb-14 lg:text-4xl lg:pt-10 lg:ml-20">Let's be friends !</h3>
-                    <p class="font-medium text-base text-secondary text-justify mb-6 lg:ml-20 lg:text-lg">Hello! If you'd like to be friends with me, feel free to follow my social media accounts.
-                        We can discuss a wide range of topics such as AI, Graphic Design, Web Development, UI/UX, and more. Feel free to ask any questions or share your thoughts on these subjects. 
-                        I'm here to help and engage in meaningful conversations.
+                    <h3 class="font-semibold text-dark text-3xl mb-14 lg:text-4xl lg:pt-10 lg:ml-20 dark:text-white">Let's be friends !</h3>
+                    <p class="font-medium text-base text-secondary text-justify mb-6 lg:ml-20 lg:text-lg dark:text-slate-400">Hello! If you'd like to be friends with me, feel free to follow my social media accounts.
+                        We can discuss a wide range of topics such as AI, Graphic Design, Web Development, UI/UX, and more. Feel free to ask any questions or share your thoughts on these subjects.
                     </p>
                     
                     <div class="flex items-center lg:ml-20">
                         <!-- Instagram -->
                         <a href="https://www.instagram.com/fwzmlna/" target="_blank" 
                         class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border
-                              border-secondary hover:border-purple-400 hover:bg-gradient-to-b from-purple-500 to-red-500 hover:text-white transition duration-300">
-                            <svg role="img" width="20" class="fill-current"  
-                            viewBox="0 0 24 24" 
-                            xmlns="http://www.w3.org/2000/svg"><title>Instagram</title>
-                            <path 
-                            d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 
-                            4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 
-                            4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 
-                            2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016
-                            -3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 
-                            1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.
-                            44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
-                            </svg>
+                          border-secondary hover:border-purple-400 hover:bg-gradient-to-b from-purple-500 to-red-500 hover:text-white transition duration-300 dark:text-white">
+                        <svg role="img" width="20" class="fill-current"  
+                        viewBox="0 0 24 24" 
+                        xmlns="http://www.w3.org/2000/svg"><title>Instagram</title>
+                        <path 
+                        d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 
+                        4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 
+                        4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 
+                        2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016
+                        -3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 
+                        1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                        </svg>
                         </a>
 
                         <!-- LinkedIn -->
                         <a href="https://www.linkedin.com/in/fawwaz-maulana-a28a3b263/" target="_blank" 
                         class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border
-                              border-secondary hover:border-sky-700 hover:bg-sky-700 hover:text-white transition duration-300">
+                              border-secondary hover:border-sky-700 hover:bg-sky-700 hover:text-white transition duration-300 dark:text-white">
                               <svg role="img"  width="20" class="fill-current"   viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title>
                               <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 
                               2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 
@@ -153,7 +181,7 @@
                          <!-- Tiktok -->
                          <a href="https://www.tiktok.com/@dominiodinaco?_t=8dvU4VV4FFp&_r=1&fbclid=PAAaZtYjdz6tI4jNZ95FVJmi96WmkNNBHDF7RhkfzMVZ8c1KitEyX1bW1y1es" target="_blank" 
                          class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border
-                               border-secondary hover:border-black hover:bg-black hover:text-white transition duration-300">
+                               border-secondary hover:border-black hover:bg-black hover:text-white transition duration-300 dark:text-white">
                                <svg role="img"  width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>TikTok</title>
                                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 
                                6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
@@ -163,7 +191,7 @@
                          <!-- Facebook -->
                          <a href="https://www.facebook.com/fawwaz.maulana.9277/" target="_blank" 
                          class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border
-                               border-secondary hover:border-primary hover:bg-primary hover:text-white transition duration-300">
+                               border-secondary hover:border-primary hover:bg-primary hover:text-white transition duration-300 dark:text-white">
                                <svg role="img"  width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Facebook</title>
                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 
                                2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
@@ -172,7 +200,7 @@
                          <!-- Threads -->
                         <a href="https://www.threads.net/@fwzmlna" target="_blank" 
                         class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border
-                           border-secondary hover:border-black hover:bg-black hover:text-white transition duration-300">
+                           border-secondary hover:border-black hover:bg-black hover:text-white transition duration-300 dark:text-white">
                            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Threads</title><path d="M17.743 11.123a8.547 8.547 0 0 0-.315-.142c-.185-3.414-2.05-5.368-5.182-5.388h-.042c-1.874 0-3.431.8-4.39 2.255l1.722 1.181c.716-1.087 1.84-1.319 2.669-1.319h.028c1.031.007 1.81.307 2.313.892.367.425.612 1.014.733 1.756a13.176 13.176 0 0 0-2.96-.143c-2.977.172-4.892 1.908-4.763 4.321.065 1.224.675 2.277 1.717 2.965.88.582 2.015.866 3.195.802 1.557-.086 2.778-.68 3.63-1.766.648-.825 1.057-1.894 1.238-3.241.742.448 1.292 1.037 1.596 1.745.517 1.205.547 3.184-1.068 4.797-1.415 1.414-3.116 2.025-5.686 2.044-2.851-.02-5.008-.935-6.41-2.717-1.313-1.67-1.991-4.08-2.016-7.165.025-3.085.703-5.496 2.016-7.165 1.402-1.782 3.558-2.696 6.41-2.717 2.871.02 5.065.94 6.521 2.73.714.879 1.252 1.983 1.607 3.27l2.018-.538c-.43-1.585-1.107-2.95-2.027-4.083C18.43 1.2 15.7.024 12.185 0h-.014C8.66.024 5.963 1.205 4.15 3.51c-1.614 2.05-2.446 4.905-2.474 8.482v.016c.028 3.578.86 6.431 2.473 8.482 1.813 2.305 4.512 3.486 8.022 3.51h.014c3.12-.022 5.319-.839 7.13-2.649 2.371-2.368 2.3-5.336 1.518-7.158-.56-1.307-1.629-2.368-3.09-3.07zm-5.387 5.065c-1.305.074-2.66-.512-2.728-1.766-.05-.93.662-1.969 2.808-2.092.246-.015.487-.021.724-.021.78 
                             0 1.508.075 2.171.22-.247 3.088-1.697 3.59-2.975 3.66z"/></svg>
                         </a>    
@@ -187,13 +215,13 @@
 
     <!-- Portfolio Section Start -->
 
-    <section id="portfolio" class="pt-36 pb-16 bg-slate-100">
+    <section id="portfolio" class="pt-36 pb-16 bg-slate-100 dark:bg-slate-800">
         <div class="container">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2">Portfolio</h4>
-                    <h2 class="font-bold text-3xl text-dark mb-4 sm:text-2xl lg:text-4xl ">My Project</h2>
-                    <p class="font-medium text-md text-secondary md:text-lg">These are some of my project</p>
+                    <h2 class="font-bold text-3xl text-dark mb-4 sm:text-2xl lg:text-4xl dark:text-white">My Project</h2>
+                    <p class="font-medium text-md text-secondary md:text-lg dark:text-slate-400">These are some of my project</p>
                 </div>
             </div>
             
@@ -202,24 +230,24 @@
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="dist/img/landing page.png" alt="landing page" width="w-full">
                     </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3 ">Landing Page Guidence.in App</h3>
-                    <p class="font-medium text-base text-secondary text-justify">guidence.in is a learning guidance application that allows users to schedule sessions with mentors for the selected subjects and engage in consultations with them. 
-                       This application is specifically designed for students who are enrolled in the D3 RPLA program at Telkom University.</p>
+                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Landing Page Guidence.in App</h3>
+                    <p class="font-medium text-base text-secondary text-justify dark:text-slate-400">guidence.in is a learning guidance application that allows users to schedule sessions with mentors for the selected subjects and engage in consultations with them. 
+                       This application is specifically designed for students who are enrolled the D3 RPLA program at Telkom University.</p>
                 </div>
                 <div class="mb-12 p-4 md:w-1/2">
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="dist/img/login page.png" alt="login page" width="w-full">
                     </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3 "> UI Login Page</h3>
-                    <p class="font-medium text-base text-secondary text-justify">Cashy is an application that allows users to provide monthly cash contributions to the admin, pay for goods such as jackets, and provides users with financial transparency within the application.
+                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white"> UI Login Page</h3>
+                    <p class="font-medium text-base text-secondary text-justify dark:text-slate-400">Cashy is an application that allows users to provide monthly cash contributions to the admin, pay for goods such as jackets, and provides users with financial transparency within the application.
                          In the development project of the Cashy application, I played a role as the Web UI designer.</p>
                 </div>
                 <div class="mb-12 p-4 md:w-1/2">
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="dist/img/isometric.jpg" alt="isometric" width="w-full">
                     </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3 ">Isometric Art</h3>
-                    <p class="font-medium text-base text-secondary text-justify">Isometric art is a drawing or illustration style that makes two-dimensional figures appear three dimensional.
+                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Isometric Art</h3>
+                    <p class="font-medium text-base text-secondary text-justify dark:text-slate-400">Isometric art is a drawing or illustration style that makes two-dimensional figures appear three dimensional.
                         This isometric art adopts the theme of "the sophistication of IT gadgets.
                     </p>
                 </div>
@@ -227,15 +255,15 @@
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="dist/img/ux.jpg" alt="ux andro" width="w-full">
                     </div>
-                    <h3 class="font-semibold text-xl text-dark mt-6 mb-3 ">UX Flow Android</h3>
-                    <p class="font-medium text-base text-secondary text-justify">This is a UX prototype of my own application named Travelo. Travelo is an application that allows users to book travel tickets to various destinations using trains, airplanes, shuttles, and taxis.</p>
+                    <h3 class="font-semibold text-xl text-dark mt-6 mb-3 dark:text-white">UX Flow Android</h3>
+                    <p class="font-medium text-base text-secondary text-justify dark:text-slate-400">This is a UX prototype of my own application named Travelo. Travelo is an application that allows users to book travel tickets to various destinations using trains, airplanes, shuttles, and taxis.</p>
                 </div>
                 <div class="mb-12 p-4 md:w-1/2">
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="dist/img/mockup hoodie.jpg" alt="mockup" width="w-full">
                     </div>
-                    <h3 class="font-semibold text-xl text-dark mt-6 mb-3 ">Mockup Hoodie Design</h3>
-                    <p class="font-medium text-base text-secondary text-justify">A mockup is a high-fidelity render of your product's design that showcases how the finished product will look.
+                    <h3 class="font-semibold text-xl text-dark mt-6 mb-3 dark:text-white">Mockup Hoodie Design</h3>
+                    <p class="font-medium text-base text-secondary text-justify dark:text-slate-400">A mockup is a high-fidelity render of your product's design that showcases how the finished product will look.
                         This mockup design utilizes a light blue color as the base color of the hoodie, with graphical elements in the center of the hoodie and text positioned at the top left of the image.
                     </p>
                 </div>
@@ -247,16 +275,18 @@
 
     <!-- Experience Section Start -->
 
-    <section id="experience" class="pt-36 pb-32 bg-slate-700 ">
+    <section id="experience" class="pt-36 pb-32 bg-slate-800 dark:bg-slate-200">
         <div class="container">
             <div class="w-full px-4">
                 <div class=" mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2">Experience</h4>
-                    <h2 class="font-bold text-xl text-white mb-4 sm:text-2xl lg:text-3xl ">My Experiences</h2>
+                    <h2 class="font-bold text-xl text-white mb-4 sm:text-2xl lg:text-3xl dark:text-dark">My Experiences</h2>
                </div>
-            <div class="mx-auto rounded-lg p-5 overflow-hidden bg-slate-300 shadow-xl md:max-w-lg lg:max-w-2xl">
-                <div class="w-full px-4 mb-12">
-                    <h3 class="text-dark font-semibold text-lg text-center">Currently studying D3 Informatics at Telkom University</h3>
+            <div class="mx-auto rounded-lg p-5 overflow-hidden bg-gradient-to-br from-slate-200 to-slate-400 shadow-xl md:max-w-lg lg:max-w-2xl 
+                 dark:bg-gradient-to-br dark:from-slate-600 dark:to-slate-800">
+              <div class=" mx-auto overflow-hidden w-64 px-4 h-1/2 max-h-72 bg-neutral-100 rounded-lg shadow-lg md:w-80">
+                <div class="w-full px-4 mb-9">
+                    <h3 class="mt-6 text-dark font-semibold text-lg text-center">School Applied of Science D3 Informatics at Telkom University</h3>
                     <div class="w-full px-4">
                         <div class="flex flex-wrap items-center justify-center">
                             <a href="https://telkomuniversity.ac.id/en/" target="_blank" class="max-w-[120px] mx-4 py-4">
@@ -265,13 +295,16 @@
                         </div>
                     </div>
                 </div>
-                <ul class="font-semibold text-base text-center mt-4">
-                     <li class="experience">Being a member of the lab's UI/UX Designer division.</li>
-                     <li class="experience">Participating in the Senior Programming Contest competition at Compfest 2023.</li>
-                     <li class="experience">Joining the student association as a staff member in the external division.</li>
+             </div>
+               <div class="w-full pt-10 mt-11 border-t border-dark dark:border-white">
+                <ul class="font-semibold text-base text-left mt-4">
+                     <li class="experience">2022 : Being a member of the lab's UI/UX Designer division.</li>
+                     <li class="experience">2023 : Participating in Senior Programming Competition Contest at Compfest 2023.</li>
+                     <li class="experience">2023 : Joining the student association as a staff member in the external division.</li>
                 </ul>
+              </div>
             </div>
-            </div>
+        </div>
         </div>
     </section>
 
@@ -279,45 +312,80 @@
 
     <!-- Gallery Section Start -->
 
-    <section id="gallery" class="pt-36 pb-32 bg-slate-100">
+    <section id="gallery" class="pt-36 pb-32 bg-slate-100 dark:bg-dark">
         <div class="container">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2">Gallery</h4>
-                    <h2 class="font-bold text-3xl text-dark mb-4 sm:text-2xl lg:text-4xl ">My Gallery</h2>
-                    <p class="font-medium text-md text-secondary md:text-lg">The Albums of Art</p>
+                    <h2 class="font-bold text-3xl text-dark mb-4 sm:text-2xl lg:text-4xl dark:text-white">My Gallery</h2>
+                    <p class="font-medium text-md text-secondary md:text-lg dark:text-slate-400">The Albums of Art</p>
                 </div>
             </div>
             <div class="flex flex-wrap justify-center">
                  <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                    <div id="wings" class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
-                        <img src="dist/img/art1.jpg" alt="wings" class="w-full">
+                    <div id="wings" class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800">
+                        <img src="dist/img/art1.jpg" alt="wings" class="w-full hover:scale-110 transition duration-500">
                         <div class="py-8 px-6">
-                            <h3 class="mb-3 font-semibold text-dark truncate">Sandal on the Wings</h3>
-                            <p class="font-medium mb-6 text-base text-secondary">Location: Museum MACAN in West Jakarta</p>
+                            <h3 class="mb-3 font-semibold text-dark dark:text-white">Sandal on the Wings</h3>
+                            <p class="font-medium mb-6 text-base text-secondary dark:text-slate-400 ">Location: Museum MACAN in West Jakarta</p>
                             <a href="https://www.google.com/maps/dir/-6.918821,107.5860216/museum+macan/@-6.5592385,106.5173786,9z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x2e69f71dafebfd57:0xf19623593db3f0f6!2m2!1d106.7679858!2d-6.1910434?entry=ttu" target="_blank" 
                              class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80 cursor-pointer">see location</a>
                         </div>
                     </div>
                  </div>
                  <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                    <div id="painting" class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
-                        <img src="dist/img/art2.jpg" alt="wings" class="w-full">
+                    <div id="painting" class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800">
+                        <img src="dist/img/art2.jpg" alt="wings" class="w-full hover:scale-110 transition duration-500">
                         <div class="py-8 px-6">
-                            <h3 class="mb-3 font-semibold text-dark truncate">Redmiller Exhibition</h3>
-                            <p class="font-medium mb-6 text-base text-secondary">Location: Grey Art Gallery in Bandung</p>
+                            <h3 class="mb-3 font-semibold text-dark dark:text-white">Redmiller Exhibition</h3>
+                            <p class="font-medium mb-6 text-base text-secondary dark:text-slate-400">Location: Grey Art Gallery in Bandung</p>
                             <a href="https://www.google.com/maps/dir/-6.918821,107.5860216/grey+art+gallery+bandung/@-6.9215158,107.5768754,14z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x2e68e78a88890369:0x8bdda39edc18493d!2m2!1d107.6095647!2d-6.9186909?entry=ttu" target="_blank"
                              class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80 cursor-pointer">see location</a>
                         </div>
                     </div>
                  </div>
                  <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                    <div id="scenery" class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
-                        <img src="dist/img/art3.jpg" alt="wings" class="w-full">
+                    <div id="scenery" class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800">
+                        <img src="dist/img/art3.jpg" alt="wings" class="w-full hover:scale-110 transition duration-500">
                         <div class="py-8 px-6">
-                            <h3 class="mb-3 font-semibold text-dark truncate">Morning Scenery</h3>
-                            <p class="font-medium mb-6 text-base text-secondary">Location: Villa Lembang in Bandung</p>
+                            <h3 class="mb-3 font-semibold text-dark dark:text-white">Morning Scenery</h3>
+                            <p class="font-medium mb-6 text-base text-secondary dark:text-slate-400">Location: Villa Lembang in Bandung</p>
                             <a href="https://www.google.com/maps/dir/-6.918821,107.5860216/villa+istana+bunga+vib/@-6.859881,107.5300537,13z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x2e68e104ef98bcf5:0xfbf71b0e077f303b!2m2!1d107.5814032!2d-6.802217?entry=ttu" target="_blank"
+                             class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80 cursor-pointer">see location</a>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+            <div class="flex flex-wrap justify-center">
+                 <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                    <div id="wings" class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800">
+                        <img src="dist/img/TSM.jpg" alt="TSM" class="w-full hover:scale-110 transition duration-500">
+                        <div class="py-8 px-6">
+                            <h3 class="mb-3 font-semibold text-dark dark:text-white">TSM Bandung Architecture</h3>
+                            <p class="font-medium mb-6 text-base text-secondary dark:text-slate-400">Location: Trans Studio Mall Bandung</p>
+                            <a href="https://www.google.com/maps/place/Trans+Studio+Mall,+Jl.+Trans+Studio+No.289,+Cibangkong,+Kec.+Batununggal,+Kota+Bandung,+Jawa+Barat+40273/@-6.9256134,107.6363623,17z/data=!3m1!4b1!4m6!3m5!1s0x2e68e7d8f905b3bf:0x90a39044f8f18366!8m2!3d-6.9255837!4d107.6366996!16s%2Fg%2F11bvtfzl_x?entry=ttu" target="_blank" 
+                             class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80 cursor-pointer">see location</a>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                    <div id="painting" class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800">
+                        <img src="dist/img/kitty.jpg" alt="wings" class="w-full hover:scale-110 transition duration-500">
+                        <div class="py-8 px-6">
+                            <h3 class="mb-3 font-semibold text-dark dark:text-white">a Cute Cat Named Kitty</h3>
+                            <p class="font-medium mb-6 text-base text-secondary dark:text-slate-400">Location: Residence in Pasirkoja Bandung</p>
+                            <a href="https://www.google.com/maps/place/Jl.+Pasirkoja,+Kec.+Astanaanyar,+Kota+Bandung,+Jawa+Barat+40242/@-6.9269619,107.6008677,17z/data=!3m1!4b1!4m6!3m5!1s0x2e68e620260712fd:0x9477c5b53a4667c2!8m2!3d-6.9269619!4d107.6008677!16s%2Fg%2F11c6cpm8j7?entry=ttu" target="_blank"
+                             class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80 cursor-pointer">see location</a>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                    <div id="scenery" class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800">
+                        <img src="dist/img/tult.jpg" alt="wings" class="w-full hover:scale-110 transition duration-500">
+                        <div class="py-8 px-6">
+                            <h3 class="mb-3 font-semibold text-dark dark:text-white">Afternoon at Campus</h3>
+                            <p class="font-medium mb-6 text-base text-secondary dark:text-slate-400">Location: Telkom University</p>
+                            <a href="https://www.google.com/maps/place/Telkom+University/@-6.973007,107.6316854,15z/data=!4m6!3m5!1s0x2e68e9adf177bf8d:0x437398556f9fa03!8m2!3d-6.973007!4d107.6316854!16s%2Fm%2F0y6lbq_?entry=ttu" target="_blank"
                              class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80 cursor-pointer">see location</a>
                         </div>
                     </div>
@@ -328,52 +396,9 @@
 
     <!-- Gallery Section End -->
 
-    <!-- Contact Section Start -->
-
-    <section id="contact" class="pt-36 pb-32">
-        <div class="container">
-            <div class="w-full px-4">
-                <div class="max-w-xl mx-auto text-center mb-16">
-                    <h4 class="font-semibold text-lg text-primary mb-2">Contact</h4>
-                    <h2 class="font-bold text-3xl text-dark mb-4 sm:text-2xl lg:text-4xl">Contact Me</h2>
-                    <p class="font-medium text-md text-secondary md:text-lg">If anyone would like to collaborate on a project with me, feel free to contact me.</p>
-                </div>
-            </div>
-            <form action="">
-                <div class="w-full lg:w-2/3 lg:mx-auto">
-                <div class="w-full px-4 mb-8">
-                        <label for="name" class="text-base text-primary font-bold">Name</label>
-                        <input type="text" id="name" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none 
-                    focus:ring-primary focus:ring-1 focus:border-primary">
-                </div>
-                <div class="w-full px-4 mb-8">
-                    <label for="email" class="text-base text-primary font-bold">Email</label>
-                    <input type="email" id="email" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none 
-                    focus:ring-primary focus:ring-1 focus:border-primary">
-                </div>
-                <div class="w-full px-4 mb-8">
-                    <label for="message" class="text-base text-primary font-bold">Message</label>
-                    <textarea type="text" id="message" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none 
-                    focus:ring-primary focus:ring-1 focus:border-primary h-32"></textarea>
-                </div>
-                <div class="w-full px-4">
-                    <button class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-xl w-full
-                    hover:opacity-80 hover:shadow-lg transition duration-300">Send</button>
-                </div>
-            </div>
-            </form>
-            <div
-            class="w-10 h-10 bg-slate-300 rounded-full flex fixed bottom-5 right-5 cursor-pointer">
-            <a href="#" class="text-lg m-auto">🔼</a>
-          </div>
-        </div> 
-    </section>
-
-    <!-- Contact Section End -->
-
     <!-- Footer Start -->
 
-    <footer class="bg-gradient-to-b from-slate-900 to-slate-700 pt-24 pb-12">
+    <footer class="bg-gradient-to-b from-slate-900 to-slate-700 pt-24 pb-12 dark:bg-gradient-to-b dark:from-slate-800 dark:to-slate-600">
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="w-full px-4 mb-12 font-medium md:w-1/3">
@@ -383,16 +408,16 @@
                     <p class="business">Bandung City</p>
                 </div>
                 <div class="w-full px-4 mb-12 md:w-1/3">
-                    <h3 class="font-semibold text-xl text-slate-300 mb-5">Art Category</h3>
+                    <h3 class="font-semibold text-xl text-slate-300 mb-5"> Album Art Category</h3>
                     <ul class="text-slate-300 font-medium">
                         <li>
                             <a href="#wings" class="inline-block text-base hover:text-cyan-300 mb-2">3D Art</a>
                         </li>
                         <li>
-                            <a href="#painting" class="inline-block text-base hover:text-cyan-300 mb-2">2D Neon Art</a>
+                            <a href="#painting" class="inline-block text-base hover:text-cyan-300 mb-2">2D Art</a>
                         </li>
                         <li>
-                            <a href="#scenery" class="inline-block text-base hover:text-cyan-300 mb-2">The Art of Sunrise</a>
+                            <a href="#scenery" class="inline-block text-base hover:text-cyan-300 mb-2">The Art of Sky</a>
                         </li>                            
                     </ul>
                 </div>
@@ -424,8 +449,7 @@
                         4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 
                         2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016
                         -3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 
-                        1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.
-                        44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                        1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
                         </svg>
                     </a>
 
@@ -470,6 +494,7 @@
                 </div>
                 <p class="font-medium text-slate-300 text-xs text-center">Copyright © 2023 Fawwaz Maulana, All Right Reserved.</p>
             </div>
+            
         </div>
     </footer>
 
@@ -479,5 +504,3 @@
 
 </body>
 </html>
-
-<!-- npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch -->
