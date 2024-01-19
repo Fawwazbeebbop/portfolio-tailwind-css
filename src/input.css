@@ -31,8 +31,8 @@ body{
     @apply -rotate-45;
 }
 
-.experience {
-    @apply text-dark mb-4 mt-2 dark:text-white;
+.experience{
+    @apply text-sm text-slate-700 dark:text-slate-400
 }
 
 .business {

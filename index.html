@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link href="dist/output.css" rel="stylesheet"/>
+    <link href="src/output.css" rel="stylesheet"/>
     <link rel="shortcut icon" href="dist/img/logo F.png" type="image/x-icon">
     <script>
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -29,7 +29,7 @@
 
     <!-- button back to top -->
 
-    <div id="scrollToTopButton" class="w-14 h-14 hidden bg-slate-900 rounded-full fixed bottom-5 right-5 z-10 cursor-pointer transition-opacity dark:bg-slate-700">
+    <div id="scrollToTopButton" class="w-14 h-14 hidden bg-slate-900 rounded-full fixed bottom-5 right-5 z-10 cursor-pointer transition-opacity dark:bg-slate-700 animate-bounce">
         <a  id="icon" class="text-lg m-auto "><img src="dist/img/up-arrow.png" width="40" alt=""></a>
     </div>
     
@@ -101,12 +101,10 @@
                 <div class="w-full self-center px-4 lg:w-1/2">
                     <h1 class="text-base font-semibold text-primary md:text-xl">Hello Everyone 👋, I'am <span class="block font-bold
                         text-dark text-4xl mt-1 lg:text-5xl dark:text-white">Fawwaz Maulana</span></h1>
-                    <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl dark:text-slate-400"> Graphic Designer & Web Developer</h2>
+                    <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl dark:text-slate-400"> UI/UX Designer & Web Developer</h2>
                     <p class="font-medium text-secondary mb-8 leading-relaxed dark:text-slate-400">"Programming isn't about what you know, 
                         <span class="text-dark font-bold dark:text-white">it's about what you can figure it out"</span></p>
 
-                    <a href="whatsapp://send?phone=6282292073852" target="_blank" class="text-base font-semibold text-white bg-primary py-3 px-6 rounded-full 
-                    hover:shadow-lg hover:opacity-80 transition duration-500 ease-in-out">Contact Me</a>    
                 </div>
                 <div class="w-full self-end px-4 lg:w-1/2">
                     <div class="relative mt-10 lg:mt-9 lg:right-0">
@@ -134,17 +132,17 @@
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="w-full px-4 mb-10 lg:w-1/2">
-                    <h4 class="font-bold text-primary text-lg mb-3">About Me</h4>
-                    <h2 class="font-bold text-dark text-3xl mb-5 max-w-medium lg:text-4xl dark:text-white">A programmer who still learn a lot of things</h2>
+                    <h4 class="font-bold text-primary text-3xl mb-6">About Me</h4>
+                    <h2 class="font-bold text-dark text-xl mb-5 max-w-medium lg:text-2xl dark:text-white">A programmer who still learn a lot of things</h2>
                     <p class="font-medium text-base text-secondary max-w-xl lg:text-lg text-justify dark:text-slate-400">
                      As an enthusiastic and detail-oriented web developer, 
                      I'am passionate about crafting elegant and functional web solutions. 
-                     I have honed my skills in front-end and back-end development, utilizing HTML, CSS, JavaScript, and various frameworks like tailwind CSS, SASS, and others. 
+                     I have honed my skills especially in front-end and minor back-end development, utilizing HTML, CSS, JavaScript, SQL, MongoDB and frameworks like tailwind CSS, SASS, Laravel PHP. 
                      i can create responsive and user-friendly website that exceed client expectations.
                     </p>
                 </div>
                 <div class="w-full px-4 lg:w-1/2">
-                    <h3 class="font-semibold text-dark text-3xl mb-14 lg:text-4xl lg:pt-10 lg:ml-20 dark:text-white">Let's be friends !</h3>
+                    <h3 class="font-semibold text-dark text-xl mb-5 lg:text-2xl lg:pt-[2.6em] lg:ml-20 dark:text-white">Let's be friends !</h3>
                     <p class="font-medium text-base text-secondary text-justify mb-6 lg:ml-20 lg:text-lg dark:text-slate-400">Hello! If you'd like to be friends with me, feel free to follow my social media accounts.
                         We can discuss a wide range of topics such as AI, Graphic Design, Web Development, UI/UX, and more. Feel free to ask any questions or share your thoughts on these subjects.
                     </p>
@@ -219,9 +217,9 @@
         <div class="container">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-16">
-                    <h4 class="font-semibold text-lg text-primary mb-2">Portfolio</h4>
-                    <h2 class="font-bold text-3xl text-dark mb-4 sm:text-2xl lg:text-4xl dark:text-white">My Project</h2>
-                    <p class="font-medium text-md text-secondary md:text-lg dark:text-slate-400">These are some of my project</p>
+                    <h4 class="font-semibold text-3xl text-primary mb-2">Portfolio</h4>
+                    <h2 class="font-bold text-xl text-dark mb-4 lg:text-2xl dark:text-white">My Project</h2>
+                    <p class="font-medium text-sm text-secondary md:text-lg dark:text-slate-400">several projects that I have worked on </p>
                 </div>
             </div>
             
@@ -231,8 +229,8 @@
                         <img src="dist/img/landing page.png" alt="landing page" width="w-full">
                     </div>
                     <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Landing Page Guidence.in App</h3>
-                    <p class="font-medium text-base text-secondary text-justify dark:text-slate-400">guidence.in is a learning guidance application that allows users to schedule sessions with mentors for the selected subjects and engage in consultations with them. 
-                       This application is specifically designed for students who are enrolled the D3 RPLA program at Telkom University.</p>
+                    <p class="font-medium text-base text-secondary text-justify dark:text-slate-400">guidence.in is a online learning web-base application that allows users to schedule sessions with mentors for the selected subjects and engage in consultations with them. This landing page build with HTML and Vanilla CSS.
+                       </p>
                 </div>
                 <div class="mb-12 p-4 md:w-1/2">
                     <div class="rounded-md shadow-md overflow-hidden">
@@ -242,6 +240,7 @@
                     <p class="font-medium text-base text-secondary text-justify dark:text-slate-400">Cashy is an application that allows users to provide monthly cash contributions to the admin, pay for goods such as jackets, and provides users with financial transparency within the application.
                          In the development project of the Cashy application, I played a role as the Web UI designer.</p>
                 </div>
+               
                 <div class="mb-12 p-4 md:w-1/2">
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="dist/img/isometric.jpg" alt="isometric" width="w-full">
@@ -267,6 +266,22 @@
                         This mockup design utilizes a light blue color as the base color of the hoodie, with graphical elements in the center of the hoodie and text positioned at the top left of the image.
                     </p>
                 </div>
+                <div class="mb-12 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden">
+                        <img src="dist/img/pbo.jpg" alt="Ringkasin" width="w-full">
+                    </div>
+                    <h3 class="font-semibold text-xl text-dark mt-6 mb-3  dark:text-white">GUI Ringkasin</h3>
+                    <p class="font-medium text-base text-secondary text-justify dark:text-slate-400"> Ringkasin is a online desktop application specifically designed to provide book for users to read and summarize. The design and system of Ringkasin are built in the Java language using the NetBeans IDE. 
+                        This is one of the GUI (Graphical User Interface) of Ringkasin, Baca Buku.</p>
+                </div>
+                <div class="mb-12 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden">
+                        <img src="dist/img/dashboardEnroll.png" alt="UI Dashboard" width="w-full">
+                    </div>
+                    <h3 class="font-semibold text-xl text-dark mt-6 mb-3 dark:text-white">UI Dashboard</h3>
+                    <p class="font-medium text-base text-secondary text-justify dark:text-slate-400">This UI dashboard is a dashboard of the Enrollify application. Enrollify is a web-based application for new student admissions that aims to facilitate the user's registration process at ITENAS Bandung.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -279,14 +294,14 @@
         <div class="container">
             <div class="w-full px-4">
                 <div class=" mx-auto text-center mb-16">
-                    <h4 class="font-semibold text-lg text-primary mb-2">Experience</h4>
-                    <h2 class="font-bold text-xl text-white mb-4 sm:text-2xl lg:text-3xl dark:text-dark">My Experiences</h2>
+                    <h4 class="font-semibold text-3xl text-primary mb-2">Experience</h4>
+                    <h2 class="font-bold text-xl text-white mb-4 lg:text-2xl dark:text-dark">My Experiences</h2>
                </div>
             <div class="mx-auto flex flex-wrap rounded-lg p-5 overflow-hidden bg-gradient-to-br from-slate-200 to-slate-400 shadow-xl md:max-w-lg lg:max-w-2xl 
                  dark:bg-gradient-to-br dark:from-slate-600 dark:to-slate-800">
               <div class=" mx-auto overflow-hidden w-64 px-4 h-1/2  bg-neutral-100 rounded-lg shadow-lg md:w-80">
                 <div class="w-full px-4 mb-9">
-                    <h3 class="mt-3 text-dark font-semibold text-lg text-center">School Applied of Science D3 Informatics at Telkom University</h3>
+                    <h3 class="mt-3 text-dark font-semibold text-lg text-center">Application Software Engineering at Telkom University</h3>
                     <div class="w-full px-4">
                         <div class="flex flex-wrap items-center justify-center">
                             <a href="https://telkomuniversity.ac.id/en/" target="_blank" class="max-w-[120px] mx-2 py-4">
@@ -298,10 +313,17 @@
              </div>
                <div class="w-full pt-10 mt-11 border-t border-dark dark:border-white">
                 <ul class="font-semibold text-base text-left mt-3">
-                     <li class="experience">2022 : Being a member of the lab's UI/UX Designer division.</li>
-                     <li class="experience">2023 : Participating in Senior Programming Competition Contest at Compfest 2023.</li>
-                     <li class="experience">2023 : Joining the student association as a staff member in the external division.</li>
-                </ul>
+                     <li class="text-lg mb-2 mt-2 dark:text-white">November 2022 - September 2023</li>
+                     <p class="experience">Being a member of the lab's UI/UX Designer division</p>
+                     <li class="text-lg mb-2 mt-6 dark:text-white">June 2023 - Present</li>
+                     <p class="experience">Joining the student association as a staff in the external division</p>
+                     <li class="text-lg mb-2 mt-6 dark:text-white">October 2023</li>
+                     <p class="experience">Participating in Senior Programming Competition Contest at Compfest 2023</p>
+                     <li class="text-lg mb-2 mt-6 dark:text-white">November 2023</li>
+                     <p class="experience">Staff of the event to play the role of a lecturer in a farewell party musical drama</p>
+                     <li class="text-lg mb-2 mt-6 dark:text-white">December 2023 - Present</li>
+                     <p class="experience">Mobile and Web Development Member in GDSC Telkom University</p>
+                </ul
               </div>
             </div>
         </div>
@@ -316,9 +338,9 @@
         <div class="container">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-16">
-                    <h4 class="font-semibold text-lg text-primary mb-2">Gallery</h4>
-                    <h2 class="font-bold text-3xl text-dark mb-4 sm:text-2xl lg:text-4xl dark:text-white">My Gallery</h2>
-                    <p class="font-medium text-md text-secondary md:text-lg dark:text-slate-400">The Albums of Art</p>
+                    <h4 class="font-semibold text-3xl text-primary mb-2">Gallery</h4>
+                    <h2 class="font-bold text-xl text-dark mb-4 lg:text-2xl dark:text-white">My Gallery</h2>
+                    <p class="font-medium text-sm text-secondary md:text-lg dark:text-slate-400">the art of photography</p>
                 </div>
             </div>
             <div class="flex flex-wrap justify-center">
@@ -329,7 +351,7 @@
                             <h3 class="mb-3 font-semibold text-dark dark:text-white">Sandal on the Wings</h3>
                             <p class="font-medium mb-6 text-base text-secondary dark:text-slate-400 ">Location: Museum MACAN in West Jakarta</p>
                             <a href="https://www.google.com/maps/place/Museum+MACAN+(Modern+and+Contemporary+Art+in+Nusantara)/@-6.1910434,106.7679858,15z/data=!4m6!3m5!1s0x2e69f71dafebfd57:0xf19623593db3f0f6!8m2!3d-6.1910434!4d106.7679858!16s%2Fg%2F11f4v4x9mf?entry=ttu" target="_blank" 
-                             class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80 cursor-pointer">see location</a>
+                             class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg transition ease-in-out delay-150 hover:scale-110 hover:bg-indigo-600 duration-300 cursor-pointer">see location</a>
                         </div>
                     </div>
                  </div>
@@ -340,7 +362,7 @@
                             <h3 class="mb-3 font-semibold text-dark dark:text-white">Redmiller Exhibition</h3>
                             <p class="font-medium mb-6 text-base text-secondary dark:text-slate-400">Location: Grey Art Gallery in Bandung</p>
                             <a href="https://www.google.com/maps/place/Grey+Art+Gallery+%26+Gold+Bricks+Cafe/@-6.9186909,107.6095647,15z/data=!4m2!3m1!1s0x0:0x8bdda39edc18493d?sa=X&ved=2ahUKEwjUvIiP3tOAAxVo-TgGHeeSD7IQ_BJ6BAhPEAA&ved=2ahUKEwjUvIiP3tOAAxVo-TgGHeeSD7IQ_BJ6BAhpEAg" target="_blank"
-                             class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80 cursor-pointer">see location</a>
+                             class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg transition ease-in-out delay-150 hover:scale-110 hover:bg-indigo-600 duration-300 cursor-pointer">see location</a>
                         </div>
                     </div>
                  </div>
@@ -351,7 +373,7 @@
                             <h3 class="mb-3 font-semibold text-dark dark:text-white">Morning Scenery</h3>
                             <p class="font-medium mb-6 text-base text-secondary dark:text-slate-400">Location: Villa Lembang in Bandung</p>
                             <a href="https://www.google.com/maps/place/Villa+Istana+Bunga+(VIB)/@-6.802217,107.5814032,15z/data=!4m6!3m5!1s0x2e68e104ef98bcf5:0xfbf71b0e077f303b!8m2!3d-6.802217!4d107.5814032!16s%2Fg%2F11gwmjf350?entry=ttu" target="_blank"
-                             class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80 cursor-pointer">see location</a>
+                             class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg transition ease-in-out delay-150 hover:scale-110 hover:bg-indigo-600 duration-300  cursor-pointer">see location</a>
                         </div>
                     </div>
                  </div>
@@ -364,29 +386,29 @@
                             <h3 class="mb-3 font-semibold text-dark dark:text-white">TSM Bandung Architecture</h3>
                             <p class="font-medium mb-6 text-base text-secondary dark:text-slate-400">Location: Trans Studio Mall Bandung</p>
                             <a href="https://www.google.com/maps/place/Trans+Studio+Mall,+Jl.+Trans+Studio+No.289,+Cibangkong,+Kec.+Batununggal,+Kota+Bandung,+Jawa+Barat+40273/@-6.9256134,107.6363623,17z/data=!3m1!4b1!4m6!3m5!1s0x2e68e7d8f905b3bf:0x90a39044f8f18366!8m2!3d-6.9255837!4d107.6366996!16s%2Fg%2F11bvtfzl_x?entry=ttu" target="_blank" 
-                             class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80 cursor-pointer">see location</a>
+                             class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg transition ease-in-out delay-150 hover:scale-110 hover:bg-indigo-600 duration-300  cursor-pointer">see location</a>
                         </div>
                     </div>
                  </div>
                  <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
                     <div id="painting" class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800">
-                        <img src="dist/img/kitty.jpg" alt="wings" class="w-full hover:scale-110 transition duration-500">
+                        <img src="dist/img/GWK.jpg" alt="GWK" class="w-full hover:scale-110 transition duration-500">
                         <div class="py-8 px-6">
-                            <h3 class="mb-3 font-semibold text-dark dark:text-white">a Cute Cat Named Kitty</h3>
-                            <p class="font-medium mb-6 text-base text-secondary dark:text-slate-400">Location: Residence in Pasirkoja Bandung</p>
-                            <a href="https://www.google.com/maps/place/Jl.+Pasirkoja,+Kec.+Astanaanyar,+Kota+Bandung,+Jawa+Barat+40242/@-6.9269619,107.6008677,17z/data=!3m1!4b1!4m6!3m5!1s0x2e68e620260712fd:0x9477c5b53a4667c2!8m2!3d-6.9269619!4d107.6008677!16s%2Fg%2F11c6cpm8j7?entry=ttu" target="_blank"
-                             class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80 cursor-pointer">see location</a>
+                            <h3 class="mb-3 font-semibold text-dark dark:text-white">Garuda Wisnu Kencana Statue</h3>
+                            <p class="font-medium mb-6 text-base text-secondary dark:text-slate-400">Location: GWK Cultural Park</p>
+                            <a href="https://www.google.com/maps/dir//Garuda+Wisnu+Kencana+Cultural+Park,+Uluwatu+Street,+Ungasan,+Badung+Regency,+Bali/@-8.8103357,115.126313,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2dd244cf54e1dec7:0x1988663e064f5a51!2m2!1d115.1675986!2d-8.8104228?entry=ttu" target="_blank"
+                             class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg transition ease-in-out delay-150 hover:scale-110 hover:bg-indigo-600 duration-300  cursor-pointer">see location</a>
                         </div>
                     </div>
                  </div>
                  <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
                     <div id="scenery" class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800">
-                        <img src="dist/img/tult.jpg" alt="wings" class="w-full hover:scale-110 transition duration-500">
+                        <img src="dist/img/sunset.jpg" alt="sunset" class="w-full hover:scale-110 transition duration-500">
                         <div class="py-8 px-6">
-                            <h3 class="mb-3 font-semibold text-dark dark:text-white">Afternoon at Campus</h3>
-                            <p class="font-medium mb-6 text-base text-secondary dark:text-slate-400">Location: Telkom University</p>
-                            <a href="https://www.google.com/maps/place/Telkom+University/@-6.973007,107.6316854,15z/data=!4m6!3m5!1s0x2e68e9adf177bf8d:0x437398556f9fa03!8m2!3d-6.973007!4d107.6316854!16s%2Fm%2F0y6lbq_?entry=ttu" target="_blank"
-                             class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80 cursor-pointer">see location</a>
+                            <h3 class="mb-3 font-semibold text-dark dark:text-white">Afternoon at Road</h3>
+                            <p class="font-medium mb-6 text-base text-secondary dark:text-slate-400">Location: Perumahan Buah Batu</p>
+                            <a href="https://www.google.com/maps/dir//2JHW%2BJ5C,+Ruko+No.+06.+Perumahan+Permata+Buah+Batu+2+Perumahan,+Jl.+Komp.+Permata+Buah+Batu+Jl.+Ciganitri+No.2,+dua,+Cipagalo,+Kec.+Bojongsoang,+Kabupaten+Bandung,+Jawa+Barat+40287/@-6.9709386,107.5629779,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2e68e950fa87b177:0x75432dbd53ed9f72!2m2!1d107.6453794!2d-6.970952?entry=ttu" target="_blank"
+                             class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg transition ease-in-out delay-150 hover:scale-110 hover:bg-indigo-600 duration-300  cursor-pointer">see location</a>
                         </div>
                     </div>
                  </div>
@@ -422,14 +444,18 @@
                     </ul>
                 </div>
                 <div class="w-full px-4 mb-12 md:w-1/3">
-                    <h3 class="font-semibold text-xl text-slate-300 mb-5">Partnership</h3>
+                    <h3 class="font-semibold text-xl text-slate-300 mb-5">Built With</h3>
                     <ul class="text-slate-300 font-medium">
                         <li>
-                            <a href="https://www.w3schools.com/" target="_blank" class="inline-block text-base text-lime-300 mb-2">W3Schools</a>
+                            <a href="https://www.w3schools.com/html/" target="_blank" class="inline-block text-base text-lime-300 mb-2">HTML</a>
+                        </li>
+                        <li>
+                            <a href="https://www.w3schools.com/js/" target="_blank" class="inline-block text-base text-yellow-300 mb-2">JavaScript</a>
                         </li>
                         <li>
                             <a href="https://tailwindcss.com/" target="_blank" class="inline-block text-base text-cyan-300 mb-2">Tailwind CSS</a>
                         </li>
+                      
                     </ul>
                 </div>
             </div>
