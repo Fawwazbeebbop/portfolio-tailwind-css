@@ -889,6 +889,10 @@ video {
   scroll-behavior: smooth;
 }
 
+.text-pretty {
+  text-wrap: pretty;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
